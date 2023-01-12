@@ -1,4 +1,5 @@
 import shutil,os,requests,json, time
+import mysql.connector
 from urllib import response
 from pathlib import Path
 
@@ -11,6 +12,12 @@ file_destination5 = '/Users/ruben/Documents/GitHub/antivirus/procesandorep/'
 file_here = '/Users/ruben/Documents/GitHub/antivirus/'
 timesleepcount=0
 
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="robbyrca",
+  password="QWEqwe123!",
+  database="antivirus"
+)
 def upload(id):
     global bucle
     global timesleepcount
@@ -53,6 +60,11 @@ def upload(id):
                     shutil.move(filename, file_destination1)
                     log(filename)
                     os.remove(rutaid)
+                    mycursor = mydb.cursor()
+                    sql = "INSERT INTO dispositivos (mountpoint, content, filename) VALUES (%s, %s, %s)"
+                    val = (file_destination1, os.path.join(r,filename), filename)
+                    mycursor.execute(sql, val)
+                    mydb.commit()
                     bucle = True
 
         else:
