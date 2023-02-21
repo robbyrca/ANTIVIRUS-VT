@@ -45,6 +45,16 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   Pas4: Realitzar les operacions que tenim que realitzar --->ls media/usb
   
   Pas5: Desmontar la memoria USB ---->umount /media/usb
+  
+# INSTALACIÓ SERVEI WEB APACHE
+  
+  Pas1: Instalació de Apache--->sudo apt update i sudo apt install apache2
+  
+  Pas2: Ajustar el firewall----> sudo ufw app list, sudo afw allow 'Apache' i per verificar el canvi --->sudo ufw status 
+  
+
+  Pas3: Comprobar el servei web----> sudo systemctl status apache2, http://ipdelservidor
+  
 
 
 
