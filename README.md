@@ -28,7 +28,7 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   Despres de això posarem la següent comanda mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
   i despres un exit.
 
-  Pas4:Probar MariaDB 
+  Pas4: Probar MariaDB 
   
   Posarem aquesta comanda: systemctl status mysql.service per poder comprobar el seu estat 
   
