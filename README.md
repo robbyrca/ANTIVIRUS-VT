@@ -15,7 +15,7 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   
   Pas3: Ajustar la autenticació i els privilegis de usuari (aixó no es obligatori)
   
-  Per poder fer-ho tindrem que obrir la consola MySQl amb la comanda sudo mysql
+  Per poder fer-ho tindrem que obrir la consola MySql amb la comanda sudo mysql
   
   Ara comprobarem el metode de autenticació utilizat per unes dels nostres usuaris amb la següent comanda:
   mysql> SELECT user, authentication_string, plugin, host FROM mysql.user;
@@ -52,7 +52,6 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   
   Pas2: Ajustar el firewall----> sudo ufw app list, sudo afw allow 'Apache' i per verificar el canvi --->sudo ufw status 
   
-
   Pas3: Comprobar el servei web----> sudo systemctl status apache2, http://ipdelservidor
   
 
