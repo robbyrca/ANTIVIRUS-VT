@@ -18,7 +18,7 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   Per poder fer-ho tindrem que obrir la consola MySQl amb la comanda sudo mysql
   
   Ara comprobarem el metode de autenticació utilizat per unes dels nostres usuaris amb la següent comanda:
-  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
+  mysql> SELECT user, authentication_string, plugin, host FROM mysql.user;
   
   Ara cambiarem el password per una contrasenya segura de la nostre elecció, tenint en compte que aquesta comanda
   pot cambiar la contrasenya "raiz": mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH csching_sha2_password BY 'password';
