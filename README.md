@@ -36,15 +36,28 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
 
 # REVISAR LINK -GESTIÓ USB-
   
-  Pas1: Creació del directori per montar la memoria USB-->mkdir /media/usb
-  
-  Pas2: Identificació del nom de la unitat que volem montar ---> ls-l /dev/sd
-  
-  Pas3: Montar la memoria USB amb la terminal-->sudo mount , mount -t vfat /dev/sdb1 /media/usb, mount -t nfts-3g /dev/sdb1 /media/usb, mount -t ext4 /dev/sdb1  /media/usb
-  
-  Pas4: Realitzar les operacions que tenim que realitzar --->ls media/usb
-  
-  Pas5: Desmontar la memoria USB ---->umount /media/usb
+1. Encuentra cómo se llama la unidad
+Necesitará saber cómo se llama la unidad para montarla. Para hacer eso, dispare uno de los siguientes (clasificados en el orden de mi preferencia):
+
+lsblk
+sudo blkid
+sudo fdisk -l
+
+Usted está buscando una partición que debe ser algo como: /dev/sdb1. Cuantos más discos tenga, mayor será la letra. De todos modos, encuéntralo y recuerda cómo se llama.
+
+2. Crear un punto de montaje (opcional)
+
+Esto necesita ser montado en el sistema de archivos en algún lugar . Por lo general, puede usar / mnt / si está siendo flojo y no hay nada más montado allí, pero de lo contrario querrá crear un nuevo directorio:
+
+sudo  mkdir /media/usb
+
+3. Monte!
+
+sudo mount /dev/sdb1 /media/usb
+
+Cuando termines, simplemente dispara:
+
+sudo umount /media/usb
   
 # INSTALACIÓ SERVEI WEB APACHE
   
