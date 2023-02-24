@@ -37,7 +37,7 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
 # REVISAR LINK -GESTIÓ USB-
   
 1. Encuentra cómo se llama la unidad
-Necesitará saber cómo se llama la unidad para montarla. Para hacer eso, dispare uno de los siguientes (clasificados en el orden de mi preferencia):
+Necesitará saber cómo se llama la unidad para montarla. Para hacer eso, dispare uno de los siguientes:
 
 lsblk
 sudo blkid
@@ -55,7 +55,7 @@ sudo  mkdir /media/usb
 
 sudo mount /dev/sdb1 /media/usb
 
-Cuando termines, simplemente dispara:
+Cuando termines, simplemente ponemos:
 
 sudo umount /media/usb
   
