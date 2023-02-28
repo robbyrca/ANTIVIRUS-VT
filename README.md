@@ -13,7 +13,7 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   
   Quan ya el tindrem instalat tindrem que modificar el nostre mySql al nostre gust i aixó es fa amb la comanda sudo mysql_secure_installation
   
-  Pas3: Ajustar la autenticació i els privilegis de usuari (aixó no es obligatori)
+  Pas3: Ajustar la autenticació i els privilegis de usuari
   
   Per poder fer-ho tindrem que obrir la consola MySql amb la comanda sudo mysql
   
