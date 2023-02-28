@@ -35,9 +35,13 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   Ahora intentarem establir una conexió amb la base de dades utilizant la eina mysqladmin(es un client que permet executar comandes administratives). Per exemple, aquesta comanda ens dira conectar MySql com root: sudo mysqladmin -p -u root version
 
 Nuestra base de datos:
+
   host="localhost",
+  
   user="robbyrca",
+  
   password="QWEqwe123!",
+  
   database="antivirus"
 
 # REVISAR LINK -GESTIÓ USB-
@@ -46,7 +50,9 @@ Nuestra base de datos:
 Necesitará saber cómo se llama la unidad para montarla. Para hacer eso, dispare uno de los siguientes:
 
 lsblk
+
 sudo blkid
+
 sudo fdisk -l
 
 Usted está buscando una partición que debe ser algo como: /dev/sdb1. Cuantos más discos tenga, mayor será la letra. De todos modos, encuéntralo y recuerda cómo se llama.
