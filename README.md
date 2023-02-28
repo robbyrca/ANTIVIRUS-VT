@@ -18,6 +18,7 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   Per poder fer-ho tindrem que obrir la consola MySql amb la comanda sudo mysql
   
   Ara comprobarem el metode de autenticació utilizat per unes dels nostres usuaris amb la següent comanda:
+  
   mysql> SELECT user, authentication_string, plugin, host FROM mysql.user;
   
   Ara cambiarem el password per una contrasenya segura de la nostre elecció, tenint en compte que aquesta comanda
@@ -28,11 +29,6 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   Despres de això posarem la següent comanda mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
   i despres un exit.
 
-  Pas4: Probar MariaDB 
-  
-  Posarem aquesta comanda: systemctl status mysql.service per poder comprobar el seu estat 
-  
-  Ahora intentarem establir una conexió amb la base de dades utilizant la eina mysqladmin(es un client que permet executar comandes administratives). Per exemple, aquesta comanda ens dira conectar MySql com root: sudo mysqladmin -p -u root version
 
 Nuestra base de datos:
 
@@ -63,13 +59,16 @@ Esto necesita ser montado en el sistema de archivos en algún lugar . Por lo gen
 
 sudo  mkdir /media/usb
 
-3. Monte!
+3. Montar USB
+
+Seguidamente,podnr
 
 sudo mount /dev/sdb1 /media/usb
 
 Cuando termines, simplemente ponemos:
 
 sudo umount /media/usb
+  
   
 # INSTALACIÓ SERVEI WEB APACHE
   
@@ -78,6 +77,8 @@ sudo umount /media/usb
   Pas2: Ajustar el firewall----> sudo ufw app list, sudo afw allow 'Apache' i per verificar el canvi --->sudo ufw status 
   
   Pas3: Comprobar el servei web----> sudo systemctl status apache2, http://ipdelservidor
+  
+  
   
 
   
