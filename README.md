@@ -5,26 +5,26 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
 
 # BASE DE DADES 
  
-  Pas1: Instalar MySql
+  Paso1: Instalar MySql
  
-  Tindrem que fer un sudo apt update y a continuació posarem sudo apt install mysql-server
+  Tendremos que hacer un sudo apt update y a continuación poner sudo apt install mysql-server
   
-  Pas2: Configuració MySql
+  Paso2: Configuración MySql
   
-  Quan ya el tindrem instalat tindrem que modificar el nostre mySql al nostre gust i aixó es fa amb la comanda sudo mysql_secure_installation
+  Cuando ya lo tengamos instalado tendremos que modificar nuestro mySql a nuestro gusto y de esta manera se hace con la comanda sudo mysql_secure_installation
   
-  Pas3: Ajustar la autenticació i els privilegis de usuari
+  Pas3: Ajustar la autenticación i los privilegioss del usuario
   
-  Per poder fer-ho tindrem que obrir la consola MySql amb la comanda sudo mysql
+  Para poder hacerlo tendremos que abrir la consola MySql con la comanda sudo mysql
   
-  Ara comprobarem el metode de autenticació utilizat per unes dels nostres usuaris amb la següent comanda:
+  Ahora comprobaremos el metodo de autenticación utilizado por uno de nuestros usuarios con la siguiente comanda:
   
   mysql> SELECT user, authentication_string, plugin, host FROM mysql.user;
   
-  Ara cambiarem el password per una contrasenya segura de la nostre elecció, tenint en compte que aquesta comanda
-  pot cambiar la contrasenya "raiz": mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH csching_sha2_password BY 'password';
+  Ahora deberemos de cambiar el password por una contraseña segura de nuestra elección, teniendo en cuenta que esta comanda
+  puede cambiar la contraseña "raiz": mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH csching_sha2_password BY 'password';
   
-  Ara executarem FLUSH PRIVILEGES per indicar al servidor que torni a cargar la taula de permisos y apliqui el nous canvis
+  Ahora ejecutaremos FLUSH PRIVILEGES para indicar el servidor que vuelva a cargar la tabla de permisos y que aplique los nuevos cambios.
   
   Despres de això posarem la següent comanda mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
   i despres un exit.
@@ -54,7 +54,7 @@ Nuestra base de datos:
 # REVISAR LINK -GESTIÓ USB-
   
 1. Encuentra cómo se llama la unidad
-Necesitará saber cómo se llama la unidad para montarla. Para hacer eso, dispare uno de los siguientes:
+Necesitará saber cómo se llama la unidad para montarla. Para hacer eso, podemos utilizar uno de los siguientes:
 
 lsblk
 
@@ -62,9 +62,8 @@ sudo blkid
 
 sudo fdisk -l
 
-Usted está buscando una partición que debe ser algo como: /dev/sdb1. Cuantos más discos tenga, mayor será la letra. De todos modos, encuéntralo y recuerda cómo se llama.
 
-2. Crear un punto de montaje (opcional)
+2. Crear un punto de montaje 
 
 Esto necesita ser montado en el sistema de archivos en algún lugar . Por lo general, puede usar / mnt / si está siendo flojo y no hay nada más montado allí, pero de lo contrario querrá crear un nuevo directorio:
 
@@ -76,7 +75,7 @@ Seguidamente, tendremos que poner:
 
 sudo mount /dev/sdb1 /media/usb
 
-Cuando termines, simplemente ponemos:
+Cuando terminemos, simplemente ponemos:
 
 sudo umount /media/usb
   
