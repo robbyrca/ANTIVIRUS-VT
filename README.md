@@ -1,7 +1,7 @@
 # ANTIVIRUS-VT
 
 En este Readme estara escrito todas las herramientas que hemos utilizado e implementando para poner nuestro proyecto en marcha
-(los codigos que hemos utlizado en lenguaje pyhton estan escritos en 3 carpetas diferentes).
+(los codigos que hemos utlizado en lenguaje pyhton estan escritos en 2 carpetas diferentes).
 
 # BASE DE DADES 
  
@@ -33,6 +33,12 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   Posarem aquesta comanda: systemctl status mysql.service per poder comprobar el seu estat 
   
   Ahora intentarem establir una conexió amb la base de dades utilizant la eina mysqladmin(es un client que permet executar comandes administratives). Per exemple, aquesta comanda ens dira conectar MySql com root: sudo mysqladmin -p -u root version
+
+Nuestra base de datos:
+  host="localhost",
+  user="robbyrca",
+  password="QWEqwe123!",
+  database="antivirus"
 
 # REVISAR LINK -GESTIÓ USB-
   
@@ -66,6 +72,8 @@ sudo umount /media/usb
   Pas2: Ajustar el firewall----> sudo ufw app list, sudo afw allow 'Apache' i per verificar el canvi --->sudo ufw status 
   
   Pas3: Comprobar el servei web----> sudo systemctl status apache2, http://ipdelservidor
+  
+
   
 
 
