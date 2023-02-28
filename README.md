@@ -28,7 +28,18 @@ En este Readme estara escrito todas las herramientas que hemos utilizado e imple
   
   Despres de això posarem la següent comanda mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
   i despres un exit.
+  
+Si deseamos conectarnos a la base de datos en local y con nombre de usuario root tendríamos que escribir:
 
+mysql -h localhost -u root -p
+
+Si queremos ver una lista de las bases de datos alojadas en nuestro servidor podemos escribir el comando show databases. Así:
+
+mysql>show databases;
+
+Una vez hemos terminado de trabajar con MySQL, si queremos cerrar la conexión con el servidor, simplemente escribimos "quit" desde el prompt de MySQL:
+
+mysql> quit
 
 Nuestra base de datos:
 
@@ -61,7 +72,7 @@ sudo  mkdir /media/usb
 
 3. Montar USB
 
-Seguidamente,podnr
+Seguidamente, tendremos que poner:
 
 sudo mount /dev/sdb1 /media/usb
 
