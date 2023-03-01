@@ -3,13 +3,13 @@ from urllib import response
 
 timesleepcount=0
 
-file_source = '/Users/ruben/Documents/GitHub/antivirus/virustotal/'
-file_destination1 = '/Users/ruben/Documents/GitHub/antivirus/procesandoid/'
-file_destination2 = '/Users/ruben/Documents/GitHub/antivirus/verificado/'
-file_destination3 = '/Users/ruben/Documents/GitHub/antivirus/cuarentena/'
-file_destination4 = '/Users/ruben/Documents/GitHub/antivirus/id/'
-file_destination5 = '/Users/ruben/Documents/GitHub/antivirus/procesandorep/'
-file_here = '/Users/ruben/Documents/GitHub/antivirus/'
+file_source = '/home/ANTIVIRUS-VT/virustotal/'
+file_destination1 = '/home/ANTIVIRUS-VT/procesandoid/'
+file_destination2 = '/home/ANTIVIRUS-VT/verificado/'
+file_destination3 = '/home/ANTIVIRUS-VT/cuarentena/'
+file_destination4 = '/home/ANTIVIRUS-VT/id/'
+file_destination5 = '/home/ANTIVIRUS-VT/procesandorep/'
+file_here = '/home/ANTIVIRUS-VT/'
 
 def upload(file):
     global timesleepcount
@@ -145,8 +145,5 @@ for root, dirs, files in os.walk(file_destination1):
             while bucle == False:
                 upload(file_destination1+filename)
 
-shutil.rmtree(file_source)
-os.mkdir(file_source)
-
-#exec(open("filereportV1.py").read())
+exec(open("filereportV1.py").read())
 

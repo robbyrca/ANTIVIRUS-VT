@@ -3,20 +3,21 @@ import mysql.connector
 from urllib import response
 from pathlib import Path
 
-file_source = '/Users/ruben/Documents/GitHub/antivirus/id/'
-file_destination1 = '/Users/ruben/Documents/GitHub/antivirus/verificado/'
-file_destination2 = '/Users/ruben/Documents/GitHub/antivirus/procesandoid/'
-file_destination3 = '/Users/ruben/Documents/GitHub/antivirus/cuarentena/'
-file_destination4 = '/Users/ruben/Documents/GitHub/antivirus/logs/'
-file_destination5 = '/Users/ruben/Documents/GitHub/antivirus/procesandorep/'
-file_here = '/Users/ruben/Documents/GitHub/antivirus/'
+file_source = '/home/ANTIVIRUS-VT/id/'
+file_destination1 = '/home/ANTIVIRUS-VT/verificado/'
+file_destination2 = '/home/ANTIVIRUS-VT/procesandoid/'
+file_destination3 = '/home/ANTIVIRUS-VT/cuarentena/'
+file_destination4 = '/home/ANTIVIRUS-VT/logs/'
+file_destination5 = '/home/ANTIVIRUS-VT/procesandorep/'
+file_here = '/home/ANTIVIRUS-VT/'
 timesleepcount=0
 
 mydb = mysql.connector.connect(
   host="localhost",
   user="robbyrca",
   password="QWEqwe123!",
-  database="antivirus"
+  database="antivirus",
+  auth_plugin='mysql_native_password'
 )
 def upload(id):
     global bucle
@@ -52,6 +53,12 @@ def upload(id):
                     shutil.move(filename, file_destination3)
                     logvir(filename)
                     os.remove(rutaid)
+                    mycursor = mydb.cursor()
+                    print(filename)
+                    sql = "INSERT INTO archivos (mountpoint, filename) VALUES ('/home/ANTIVIRUS-VT/cuarentena', filename)"
+                    val = (file_destination3, os.path.join(r, filename), filename)
+                    mycursor.execute(sql, val)
+                    mydb.commit()
                     bucle = True
                 else:
                     #print('entro r')
@@ -61,7 +68,8 @@ def upload(id):
                     log(filename)
                     os.remove(rutaid)
                     mycursor = mydb.cursor()
-                    sql = "INSERT INTO dispositivos (mountpoint, content, filename) VALUES (%s, %s, %s)"
+                    print(filename)
+                    sql = "INSERT INTO archivos (mountpoint, filename) VALUES ('/home/ANTIVIRUS-VT/verificado', filename)"
                     val = (file_destination1, os.path.join(r,filename), filename)
                     mycursor.execute(sql, val)
                     mydb.commit()
