@@ -107,19 +107,19 @@ Lo primero que necesitas para tener un servidor Linux ubuntu que monte una unida
 
 Esto se puede hacer editando el archivo de configuración del kernel:
 
-1. Abre una terminal y escribe "sudo nano /etc/default/grub".
-2. Busca la línea "GRUB_CMDLINE_LINUX_DEFAULT" y agrega "usbcore.autosuspend=-1" al final de la línea. Esto habilitará el soporte para USB.
-3. Guarda el archivo y luego ejecuta el siguiente comando para actualizar el archivo de configuración del kernel: "sudo update-grub".
+1. Abre una terminal y escribe `sudo nano /etc/default/grub`.
+2. Busca la línea `GRUB_CMDLINE_LINUX_DEFAULT` y agrega `usbcore.autosuspend=-1` al final de la línea. Esto habilitará el soporte para USB.
+3. Guarda el archivo y luego ejecuta el siguiente comando para actualizar el archivo de configuración del kernel: `sudo update-grub`.
 
 Una vez que el soporte para USB está habilitado, puedes configurar el servidor para montar una unidad USB automáticamente. Esto se puede lograr editando el archivo de configuración del sistema "fstab", que controla cómo se montan los sistemas de archivos.
 
-1. Abre una terminal y escribe: sudo nano /etc/fstab.
+1. Abre una terminal y escribe: `sudo nano /etc/fstab`.
 
-2. Agrega la siguiente línea al archivo: "/dev/sdb1 /mnt/usbdrive auto rw,user,noauto 0 0". Esta línea le dice al sistema que monte la unidad USB en la carpeta "/mnt/usbdrive" cada vez que se conecte.
+2. Agrega la siguiente línea al archivo: `/dev/sdb1 /mnt/usbdrive auto rw,user,noauto 0 0`. Esta línea le dice al sistema que monte la unidad USB en la carpeta `/mnt/usbdrive` cada vez que se conecte.
 
 3. Guarda el archivo y reinicia el sistema para que los cambios surtan efecto.
 
-Ahora, cada vez que conectes una unidad USB, el servidor Linux la montará automáticamente en la carpeta "/mnt/usbdrive".
+Ahora, cada vez que conectes una unidad USB, el servidor Linux la montará automáticamente en la carpeta `/mnt/usbdrive`.
 
 Este es el codigo para montar el USB en python:
 
