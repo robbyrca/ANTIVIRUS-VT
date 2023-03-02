@@ -1,7 +1,16 @@
 # ANTIVIRUS-VT
 
 En este Readme estara escrito todas las herramientas que hemos utilizado e implementando para poner nuestro proyecto en marcha
-(los codigos que hemos utlizado en lenguaje pyhton estan escritos en 2 carpetas diferentes).
+
+# CODIGO DE PYTHON 
+
+Esta dividido en dos carpetas:
+
+`sendApi.py`
+
+`FileReport.py`
+
+# 
 
 # BASE DE DADES 
  
