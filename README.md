@@ -14,13 +14,13 @@ Esta dividido en dos carpetas:
 
 Este es el link para acceder a todo los archivos que hemos utilizado para la nuestra DB
 
-`https://github.com/robbyrca/antivirus_vt-db`
+https://github.com/robbyrca/antivirus_vt-db
 
 # GITHUB DE LA PAGINA WEB
 
 Este es el link para acceder a nuestro github con todos los archivos que hemos necesitado para la web
 
-`https://github.com/robbyrca/antivirus_vt-website`
+https://github.com/robbyrca/antivirus_vt-website
 
 # BASE DE DADES 
  
