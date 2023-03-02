@@ -136,8 +136,49 @@ Informamos al usuario que ha sido montado
 `print("Se ha montado el dispositivo "+dev_name+" en "+mount_dir)
 else:
 print("No se ha detectado ningún dispositivo USB")`
-  
-  
+
+
+# Registrar los identificadores de los usb y los ficheros analizados en Base de Datos
+
+[https://es.ccm.net/ordenadores/hardware/1538-encontrar-el-id-de-hardware-de-un-dispositivo/](https://es.ccm.net/ordenadores/hardware/1538-encontrar-el-id-de-hardware-de-un-dispositivo/) ] —> en windows
+
+[ [https://github.com/Arkhelan/Proyecto/blob/main/Scripts/home/albert/fin/detusb.sh](https://github.com/Arkhelan/Proyecto/blob/main/Scripts/home/albert/fin/detusb.sh) ] —> .py del albert
+
+Win +R —> ***devmgmt.msc***
+
+propiedades
+
+detalles
+
+id hardware
+
+Comandos que hemos utilizado
+
+`df -h`
+`lsblk`
+`sudo fdisk -l`      —> ESTE ES EL BUENO “DISK MODEL=NOMBRE DEL USB”
+`lsusb`
+
+comandos GREP —> [ [https://www.freecodecamp.org/espanol/news/grep-command-tutorial-how-to-search-for-a-file-in-linux-and-unix-with-recursive-find/](https://www.freecodecamp.org/espanol/news/grep-command-tutorial-how-to-search-for-a-file-in-linux-and-unix-with-recursive-find/) ]
+
+Hemos creado una carpeta llamada `usbworkspace` para trabajar con el usb…
+
+Hemos creado 2 archivos: usbName —> `sudo fdisk -l > usbName`
+
+En este archivo van todos los datos de los discos que tenga la maquina…
+
+Creamos el segundo archivo: usbID —> `grep ‘Disk model:’ usbName > usbID` 
+
+En este momento tenemos 2 id en el archivo usbID: `el modelo del USB` y `el disco de virtualBox llamado VBOX HARDDISK`
+
+Para poder obtener `SOLO` el nombre del USB tenemos que excluir el VBOX HARDDISK
+
+En teoria este comando tendria mostrar el nombre del usb pero NO lo hace
+
+`grep -v "VBOX HARDDISK" Disk model usbName`
+
+Para que funcione tenemos que crear un registro en la DDBB  
+
 # INSTALACIÓ SERVEI WEB APACHE
   
 Pas1: Instalació de Apache--->`sudo apt update i sudo apt install apache2`
