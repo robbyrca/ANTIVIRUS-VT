@@ -22,7 +22,7 @@ Este es el link para acceder a nuestro github con todos los archivos que hemos n
 
 https://github.com/robbyrca/antivirus_vt-website
 
-# BASE DE DADES 
+# BASE DE DATOS
  
   Paso1: Instalar MySql
  
