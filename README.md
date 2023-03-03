@@ -71,11 +71,13 @@ Nuestra base de datos:
   
   database="antivirus"
 
-# REVISAR LINK -GESTIÓ USB-
+# GESTION DEL USB EN UBUNTU
   
 PASO 1: CREAR EL DIRECTORIO PARA MONTAR LA MEMORIA USB**
 
 `mkdir /media/usb`
+
+Posteriormente lo sustituiremos por `/home/ANTIVIRUS-VT/virustotal` para poder trabajar de forma adecuada con nuestro codigo en python.
 
 **PASO 2: IDENTIFICAR EL NOMBRE DE LA UNIDAD QUE QUEREMOS MONTAR**
 
