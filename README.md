@@ -1,26 +1,30 @@
 # ANTIVIRUS-VT
 
-En este Readme estara escrito todas las herramientas que hemos utilizado e implementando para poner nuestro proyecto en marcha
+En este Readme vamos a detallar todas las herramientas que hemos utilizado e implementando para poner nuestro proyecto en marcha.
 
 # CODIGO DE PYTHON 
 
-Esta dividido en dos carpetas:
+Esta dividido en dos archivos para facilitar la gestion de fallos.
 
-`sendApi.py`
+`sendApiV3.py`
 
-`FileReport.py`
+`FileReportV1.py`
 
 # GITHUB DE LA BASE DE DATOS
 
-Este es el link para acceder a todo los archivos que hemos utilizado para la nuestra DB
+Este es el link para acceder al respaldo de nuestras dos bases de datos que hemos utilizado en nuestro proyecto.
 
 https://github.com/robbyrca/antivirus_vt-db
 
+Nuestra base de datos esta dividida en dos de estas. Tenemos la db que gestiona unicamente la web llamada intranet y con una tabla usuarios. La segunda se llama antivirus y contiene las tablas de cuarentena, archivos y dispositivos.
+
 # GITHUB DE LA PAGINA WEB
 
-Este es el link para acceder a nuestro github con todos los archivos que hemos necesitado para la web
+Este es el link para acceder a nuestro github con el respaldo de todos los archivos que utiliza nuestra web.
 
 https://github.com/robbyrca/antivirus_vt-website
+
+Como se puede ver, esta dividido en 5 grandes apartados: Home, archivos, dispositivos, cuarentena y contacto. Luego podemos encontrar un panel de login que aun estamos terminando de desarrollar.
 
 # BASE DE DATOS
  
