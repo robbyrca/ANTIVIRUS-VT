@@ -161,7 +161,7 @@ print("No se ha detectado ningún dispositivo USB")`
 
 [https://es.ccm.net/ordenadores/hardware/1538-encontrar-el-id-de-hardware-de-un-dispositivo/](https://es.ccm.net/ordenadores/hardware/1538-encontrar-el-id-de-hardware-de-un-dispositivo/) ] —> en windows
 
-[ [https://github.com/Arkhelan/Proyecto/blob/main/Scripts/home/albert/fin/detusb.sh](https://github.com/Arkhelan/Proyecto/blob/main/Scripts/home/albert/fin/detusb.sh) ] —> .py del albert
+[ [https://github.com/Arkhelan/Proyecto/blob/main/Scripts/home/albert/fin/detusb.sh](https://github.com/Arkhelan/Proyecto/blob/main/Scripts/home/albert/fin/detusb.sh) ] —> archivo bash del albert
 
 Win +R —> ***devmgmt.msc***
 
@@ -200,11 +200,17 @@ Para que funcione tenemos que crear un registro en la DDBB
 
 # INSTALACIÓ SERVEI WEB APACHE
   
-Pas1: Instalació de Apache--->`sudo apt update i sudo apt install apache2`
+**Paso 1: Instalación de Apache** 
+
+Para instalar el servicio de apache, primero deberemos verificar que el sistema se encuentra actualizado. Para ello introducimos el comando `sudo apt update && sudo apt upgrade --y`
+
+Una vez termine de actualizar ya podremos proceder a instalar el apache, en este caso el 2. Introducimos `sudo apt install apache2`
   
-Pas2: Ajustar el firewall----> `sudo ufw app list, sudo afw allow 'Apache'` i per verificar el canvi --->`sudo ufw status` 
+**Paso 2: Habilitar los puertos en el firewall**
+
+Primero deberemos comprobar que puertos se encuentran ya abiertos para ver si en nuestro caso necesitamos habilitar esta regla. Ejecutamos `sudo ufw status`. Una vez hayamos comprobado si apache se encuentra en la lista, deberemos habilitarlo en caso de que no aparezca. Introducimos `sudo ufw allow 'Apache'`. Ahora volveremos a ejecutar el comando anterior para ver si ya se ha añadido.
   
-Pas3: Comprobar el servei web----> `sudo systemctl status apache2, http://ipdelservidor`
+Ahora ya podemos introducir la ip de nuestra maquina en el navegador y veremos que apache se encuentra funcionando.
   
   
   
