@@ -3,13 +3,13 @@ from urllib import response
 
 timesleepcount=0
 
-file_source = '/home/ANTIVIRUS-VT/virustotal/'
-file_destination1 = '/home/ANTIVIRUS-VT/procesandoid/'
-file_destination2 = '/home/ANTIVIRUS-VT/verificado/'
-file_destination3 = '/home/ANTIVIRUS-VT/cuarentena/'
-file_destination4 = '/home/ANTIVIRUS-VT/id/'
-file_destination5 = '/home/ANTIVIRUS-VT/procesandorep/'
-file_here = '/home/ANTIVIRUS-VT/'
+file_source = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/virustotal/'
+file_destination1 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/procesandoid/'
+file_destination2 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/verificado/'
+file_destination3 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/cuarentena/'
+file_destination4 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/id/'
+file_destination5 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/procesandorep/'
+file_here = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/'
 
 def upload(file):
     global timesleepcount
@@ -129,7 +129,7 @@ logpy()
 for root, dirs, files in os.walk(file_source):
     for filename in files:
         filepath = os.path.join(root, filename)
-        shutil.move(filepath, file_destination1)
+        shutil.copy(filepath, file_destination1)
 for root, dirs, files in os.walk(file_destination1):
     for filename in files:
         if (os.path.getsize(os.path.join(root, filename)) >> 20) > 32:  

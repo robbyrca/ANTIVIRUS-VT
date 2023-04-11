@@ -3,13 +3,13 @@ import mysql.connector
 from urllib import response
 from pathlib import Path
 
-file_source = '/home/ANTIVIRUS-VT/id/'
-file_destination1 = '/home/ANTIVIRUS-VT/verificado/'
-file_destination2 = '/home/ANTIVIRUS-VT/procesandoid/'
-file_destination3 = '/home/ANTIVIRUS-VT/cuarentena/'
-file_destination4 = '/home/ANTIVIRUS-VT/logs/'
-file_destination5 = '/home/ANTIVIRUS-VT/procesandorep/'
-file_here = '/home/ANTIVIRUS-VT/'
+file_source = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/id/'
+file_destination1 = '//Users/ruben/Documents/GitHub/ANTIVIRUS-VT/verificado/'
+file_destination2 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/procesandoid/'
+file_destination3 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/cuarentena/'
+file_destination4 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/logs/'
+file_destination5 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/procesandorep/'
+file_here = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/'
 timesleepcount=0
 
 mydb = mysql.connector.connect(
