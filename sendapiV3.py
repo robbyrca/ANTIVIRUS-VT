@@ -129,7 +129,7 @@ logpy()
 for root, dirs, files in os.walk(file_source):
     for filename in files:
         filepath = os.path.join(root, filename)
-        shutil.move(filepath, file_destination1)
+        shutil.copy(filepath, file_destination1)
 for root, dirs, files in os.walk(file_destination1):
     for filename in files:
         if (os.path.getsize(os.path.join(root, filename)) >> 20) > 32:  
