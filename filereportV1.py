@@ -55,8 +55,8 @@ def upload(id):
                     os.remove(rutaid)
                     mycursor = mydb.cursor()
                     print(filename)
-                    sql = "INSERT INTO archivos (mountpoint, filename) VALUES ('/home/ANTIVIRUS-VT/cuarentena', filename)"
-                    val = (file_destination3, os.path.join(r, filename), filename)
+                    sql = "INSERT INTO archivos (mountpoint, filename) VALUES (%s, %s)"
+                    val = ('/home/ANTIVIRUS-VT/cuarentena', filename)
                     mycursor.execute(sql, val)
                     mydb.commit()
                     bucle = True
@@ -69,8 +69,8 @@ def upload(id):
                     os.remove(rutaid)
                     mycursor = mydb.cursor()
                     print(filename)
-                    sql = "INSERT INTO archivos (mountpoint, filename) VALUES ('/home/ANTIVIRUS-VT/verificado', filename)"
-                    val = (file_destination1, os.path.join(r,filename), filename)
+                    sql = "INSERT INTO archivos (mountpoint, filename) VALUES (%s, %s)"
+                    val = ('/home/ANTIVIRUS-VT/verificado',filename)
                     mycursor.execute(sql, val)
                     mydb.commit()
                     bucle = True
