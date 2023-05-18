@@ -1,5 +1,6 @@
 import shutil,os,requests,json,time
 from urllib import response
+from filereportV1 import main_filereport
 
 timesleepcount=0
 
@@ -145,5 +146,4 @@ for root, dirs, files in os.walk(file_destination1):
             while bucle == False:
                 upload(file_destination1+filename)
 
-exec(open("filereportV1.py").read())
-
+main_filereport()

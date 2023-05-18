@@ -103,54 +103,56 @@ def logpy():
     with open(file_here+'logsfile', "a") as fp:
         fp.write("\n#filereportV1.py\n")
 
-logpy()
-for root, dirs, files in os.walk(file_source):
-    for filename in files:
-        filepath = os.path.join(root, filename)
-        enviocheck = filepath
-        idenruta = checkFileExistance (enviocheck)
-        if idenruta == True:
-            if filepath != ('/Users/ruben/Documents/GitHub/antivirus/id/.DS_Store'):
-                with open(filepath, 'r') as r:
-                    contenido = r.read()
-                contsplit = contenido.split(":")
-                idcont = contsplit[1]
-                filename1 = contsplit [0]
-                filename2 = filename1.split('"')
-                filename = filename2 [1]
-                idesp = idcont.split('"')
-                id = idesp[0]
-                #print(id)
-                rutaid = filepath
-                enviocheck = filename
-                existe = checkFileExistance(enviocheck)
-                if existe == True:
-                    if filepath != ('/Users/ruben/Documents/GitHub/antivirus/id/.DS_Store'):
-                        bucle=False
-                        while bucle == False:
-                            upload(id)
+def main_filereport():
+
+    logpy()
+    for root, dirs, files in os.walk(file_source):
+        for filename in files:
+            filepath = os.path.join(root, filename)
+            enviocheck = filepath
+            idenruta = checkFileExistance (enviocheck)
+            if idenruta == True:
+                if filepath != ('/Users/ruben/Documents/GitHub/antivirus/id/.DS_Store'):
+                    with open(filepath, 'r') as r:
+                        contenido = r.read()
+                    contsplit = contenido.split(":")
+                    idcont = contsplit[1]
+                    filename1 = contsplit [0]
+                    filename2 = filename1.split('"')
+                    filename = filename2 [1]
+                    idesp = idcont.split('"')
+                    id = idesp[0]
+                    #print(id)
+                    rutaid = filepath
+                    enviocheck = filename
+                    existe = checkFileExistance(enviocheck)
+                    if existe == True:
+                        if filepath != ('/Users/ruben/Documents/GitHub/antivirus/id/.DS_Store'):
+                            bucle=False
+                            while bucle == False:
+                                upload(id)
+                        else:
+                            os.remove(filepath)
+                            print(filepath)
+                            print('removed')
                     else:
-                        os.remove(filepath)
-                        print(filepath)
-                        print('removed')
+                        print ('No se ha encontrado el archivo')
+                        os.remove(rutaid)
                 else:
-                    print ('No se ha encontrado el archivo')
-                    os.remove(rutaid)
+                    print(filepath)
+                    print('removed')
+                    os.remove(filepath)
             else:
-                print(filepath)
-                print('removed')
-                os.remove(filepath)
-        else:
-            print('No hay ningun archivo a analizar')
+                print('No hay ningun archivo a analizar')
 
-count=0
+    count=0
 
-for path in os.listdir(file_destination2):
-    if os.path.isfile(os.path.join(root, filename)):
-            count = count + 1
+    for path in os.listdir(file_destination2):
+        if os.path.isfile(os.path.join(root, filename)):
+                count = count + 1
 
-#print('Quedan ' + str(count) + ' archivos por analizar')
+    #print('Quedan ' + str(count) + ' archivos por analizar')
 
-if count > 0:
-    if filepath != (file_source+'.DS_Store'):
-        print('\n'+'Quedan ' + str(count) + ' archivos por analizar')
+    if count > 0:
+        if filepath != (file_source+'.DS_Store'):
+            print('\n'+'Quedan ' + str(count) + ' archivos por analizar')
