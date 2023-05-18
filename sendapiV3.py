@@ -4,13 +4,13 @@ from filereportV1 import main_filereport
 
 timesleepcount=0
 
-file_source = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/virustotal/'
-file_destination1 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/procesandoid/'
-file_destination2 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/verificado/'
-file_destination3 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/cuarentena/'
-file_destination4 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/id/'
-file_destination5 = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/procesandorep/'
-file_here = '/Users/ruben/Documents/GitHub/ANTIVIRUS-VT/'
+file_source = '/home/robbyrca/ANTIVIRUS-VT/virustotal/'
+file_destination1 = '/home/robbyrca/ANTIVIRUS-VT/procesandoid/'
+file_destination2 = '/home/robbyrca/ANTIVIRUS-VT/verificado/'
+file_destination3 = '/home/robbyrca/ANTIVIRUS-VT/cuarentena/'
+file_destination4 = '/home/robbyrca/ANTIVIRUS-VT/id/'
+file_destination5 = '/home/robbyrca/ANTIVIRUS-VT/procesandorep/'
+file_here = '/home/robbyrca/ANTIVIRUS-VT/'
 
 def upload(file):
     global timesleepcount
