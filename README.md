@@ -13,9 +13,11 @@ Esta dividido en dos archivos para facilitar la gestion de fallos.
 
 # GITHUB DE LA BASE DE DATOS
 
-Este es el link para acceder al respaldo de nuestras dos bases de datos que hemos utilizado en nuestro proyecto.
+Este es el link para acceder al respaldo de nuestra base de datos que hemos utilizado en nuestro proyecto:
 
 https://github.com/robbyrca/antivirus_vt-db
+
+En este github veras nuestra base de datos llamada antivirus donde veras las cuatro tablas que hemos creado: `usuarios`, `cuarentena`, `dispositivos` y `archivos`
 
 Nuestra base de datos esta dividida en dos de estas. Tenemos la db que gestiona unicamente la web llamada intranet y con una tabla usuarios. La segunda se llama antivirus y contiene las tablas de cuarentena, archivos y dispositivos.
 
