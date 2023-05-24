@@ -6,7 +6,7 @@ En este Readme vamos a detallar todas las herramientas que hemos utilizado e imp
 
 Esta dividido en dos archivos para facilitar la gestion de fallos.
 
-`sendApiV3.py`—> en este codigo python lo que hacemos es mover los archivos obtenidos, mandar archivos a la API que tenemos, recibir la ID y hacer nuevos archivos.
+`sendApiV3.py`—> en este codigo python lo que hacemos es mover los archivos obtenidos, mandar archivos a la API que tenemos, recibir la ID.
 
 `FileReportV1.py`—> en este codigo python lo que hacemos es mandar el ID del archivo, recibir un response code, mover el archivo correspondiente y hacer el registro en la base de datos llamada `antivirus` donde se dividiran en archivos o en quarentena, donde tendran dos tablas con su respectivo Nombre (file_name) y su ruta (Path).
 
